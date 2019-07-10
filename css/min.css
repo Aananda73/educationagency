@@ -1,0 +1,155 @@
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.vertical-tab {
+    display: table;
+}
+
+.vertical-tab .nav-tabs {
+    display: table-cell;
+    width: 28%;
+    min-width: 28%;
+    border: none;
+    position: relative;
+}
+
+.vertical-tab .nav-tabs li {
+    float: none;
+    vertical-align: top;
+}
+
+.vertical-tab .nav-tabs li a {
+    display: block;
+    padding: 8px 15px;
+    margin: 0 10px 10px 0;
+    border-radius: 20px;
+    border: 1px solid #909090;
+    font-size: 18px;
+    font-weight: 600;
+    color: #29335c;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 0 0 5px #fff inset;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+
+.vertical-tab .nav-tabs li:last-child a {
+    margin-bottom: 0;
+}
+
+.vertical-tab .nav-tabs li a:hover,
+.vertical-tab .nav-tabs li.active a,
+.vertical-tab .nav-tabs li.active a:hover {
+    background: traparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.vertical-tab .nav-tabs li a:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    background: linear-gradient(to right, #d61e41, #f19c16);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.vertical-tab .nav-tabs li.active a:before,
+.vertical-tab .nav-tabs li a:hover:before {
+    left: 0;
+    opacity: 1;
+}
+
+.vertical-tab .tab-content {
+    display: table-cell;
+    padding: 10px 20px;
+    background: #29335c;
+    border-radius: 20px;
+    vertical-align: top;
+    font-size: 15px;
+    color: #fff;
+    line-height: 27px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.vertical-tab .tab-content h3 {
+    font-size: 24px;
+    margin: 0 0 5px 0;
+}
+
+@media only screen and (max-width: 479px) {
+    .vertical-tab .nav-tabs {
+        display: block;
+        width: 100%;
+        border-right: none;
+    }
+    .vertical-tab .nav-tabs li {
+        margin: 0 0 10px 0;
+    }
+    .vertical-tab .nav-tabs li:last-child {
+        margin: 0;
+    }
+    .vertical-tab .nav-tabs li a {
+        padding: 10px;
+        margin: 0;
+    }
+    .vertical-tab .tab-content {
+        display: block;
+        padding: 20px 15px 5px;
+        border-radius: 0 0 10px 10px;
+    }
+    .vertical-tab .tab-content h3 {
+        font-size: 18px;
+    }
+}
+
+#statement-usa {
+    background: url("../images/usa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#statement-australia {
+    background: url("../images/australia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

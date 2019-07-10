@@ -1,0 +1,782 @@
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    body {
+        color: #212226;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif;
+    }
+    
+    .loader-wrapper {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #242f3f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .loader {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        /******** <- Remove this line *********/
+        border: 4px solid #Fff;
+        animation: loader 2s infinite ease;
+    }
+    
+    .loader-inner {
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        animation: loader-inner 2s infinite ease-in;
+    }
+    
+    @keyframes loader {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(180deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        75% {
+            transform: rotate(360deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes loader-inner {
+        0% {
+            height: 0%;
+        }
+        25% {
+            height: 0%;
+        }
+        50% {
+            height: 100%;
+        }
+        75% {
+            height: 100%;
+        }
+        100% {
+            height: 0%;
+        }
+    }
+    
+    .d3d {
+        text-shadow: 1px 1px 0 #CCC, 2px 2px 0 #CCC, /* end of 2 level deep grey shadow */
+        3px 3px 0 #444, 4px 4px 0 #444, 5px 5px 0 #444, 6px 6px 0 #444;
+        /* end of 4 level deep dark shadow */
+        transition: all 0.12s ease-out;
+        -webkit-transition: all 0.12s ease-out;
+        /* Safari & Chrome */
+        -moz-transition: all 0.12s ease-out;
+        /* Firefox */
+        -o-transition: all 0.12s ease-out;
+    }
+    
+    .d3d:hover {
+        /* CSS3 Transform Effect */
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        /* Safari & Chrome */
+        -moz-transform: scale(1.2);
+        /* Firefox */
+        -o-transform: scale(1.2);
+        /* Opera */
+    }
+    
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    
+    section {
+        background: #fff;
+        overflow: hidden;
+    }
+    
+    #slider {
+        padding: 40px;
+    }
+    /*Sticky nav bar----------*/
+    
+    .navbar {
+        z-index: 999;
+    }
+    
+    .icon-bar {
+        z-index: 999;
+    }
+    
+    .mock-test {
+        z-index: 999;
+    }
+    
+    .affix {
+        top: 0;
+        width: 100%;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        background-color: #F44336;
+        border-color: #F44336;
+    }
+    
+    .affix a {
+        color: #fff !important;
+        padding: 15px !important;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    
+    .affix .dropdown-menu a {
+        color: #000 !important;
+    }
+    
+    .affix-top a {
+        padding: 25px !important;
+    }
+    
+    .affix+.container-fluid {
+        padding-top: 95px;
+    }
+    /* Home video */
+    
+    #home {
+        background: none;
+        height: 100%;
+    }
+    
+    #home-bg-video {
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        background-size: cover;
+        height: auto;
+        width: auto;
+        position: fixed;
+        z-index: -1;
+    }
+    
+    #home-overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    #home-heading h1 span {
+        color: white;
+        font-size: 45px;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    #home-heading h1 span.text3 {
+        color: #F44336;
+        font-weight: 800;
+    }
+    
+    .text1 {
+        font-size: 60px;
+        letter-spacing: 5px;
+        position: relative;
+        animation: text 3s 1;
+    }
+    
+    .text2 {
+        font-size: 30px;
+        animation: text 3s 1;
+    }
+    
+    .text3 {
+        font-size: 60px;
+        animation: text 3s 1;
+    }
+    
+    @keyframes text {
+        0% {
+            color: #000;
+            margin-bottom: -70px;
+        }
+        30% {
+            letter-spacing: 25px;
+            margin-bottom: -120px;
+        }
+        85% {
+            letter-spacing: 8px;
+            margin-bottom: -70px;
+        }
+    }
+    
+    #home-content {
+        width: 100%;
+        height: 100%;
+        display: table;
+    }
+    
+    #home-content-inner {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    /*animated text---------*/
+    
+    #te-container {
+        color: #999;
+        background-color: #DC143C;
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: bold;
+        padding-top: 20px;
+        width: 100%;
+        display: inline-block;
+    }
+    
+    #flip {
+        height: 50px;
+        overflow: hidden;
+    }
+    
+    #flip>div>div {
+        color: #fff;
+        padding: 4px 4px;
+        max-height: 45px;
+        margin-bottom: 45px;
+        display: inline-block;
+    }
+    
+    #flip div:first-child {
+        animation: show 5s linear infinite;
+    }
+    
+    #flip div div {
+        background: #DC143C;
+    }
+    
+    #flip div:first-child div {
+        background: #DC143C;
+    }
+    
+    #flip div:last-child div {
+        background: #DC143C;
+    }
+    
+    @keyframes show {
+        0% {
+            margin-top: -270px;
+        }
+        5% {
+            margin-top: -180px;
+        }
+        33% {
+            margin-top: -180px;
+        }
+        38% {
+            margin-top: -90px;
+        }
+        66% {
+            margin-top: -90px;
+        }
+        71% {
+            margin-top: 0px;
+        }
+        99.99% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: -270px;
+        }
+    }
+    /*features-----------*/
+    
+    .f-item {
+        background-color: #fff;
+        padding: 80px 30px;
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: all 500ms ease-in-out;
+        -webkit-transition: all 500ms ease-in-out;
+    }
+    
+    .f-item i {
+        font-size: 42px;
+        margin: 0;
+        transition: all 500ms ease-in-out;
+        -webkit-transition: all 500ms ease-in-out;
+    }
+    
+    .f-item:hover i,
+    .f-item:hover h3,
+    .f-item:hover hr,
+    .f-item:hover p {
+        color: #fff;
+    }
+    
+    .f-item:hover i {
+        transform: translateY(-20px);
+    }
+    
+    .f-item h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .f-item hr {
+        width: 125px;
+        height: 3px;
+        background-color: #F44336;
+        margin: 0 auto;
+        border: none;
+    }
+    
+    .f-item p {
+        margin-top: 20px;
+    }
+    
+    .f-item:hover {
+        background-color: #F44336;
+    }
+    
+    #features {
+        background-color: #f4f4f4;
+    }
+    
+    #top-banner {
+        padding: 30px 0;
+    }
+    
+    .container-box-md {
+        padding: 50px;
+        margin: 30 auto;
+        text-align: center;
+    }
+    
+    .container-box-lg {
+        padding: 100px;
+        margin: 30 auto;
+        text-align: center;
+    }
+    
+    #statement {
+        background: url("../images/aw.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    /*Social-icons-----------*/
+    /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+    
+    .icon-bar {
+        position: fixed;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    /* Style the icon bar links */
+    
+    .icon-bar a {
+        display: block;
+        text-align: center;
+        padding: 12px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+    }
+    /* Style the social media icons with color, if you want */
+    
+    .icon-bar a:hover {
+        background-color: #000;
+    }
+    
+    .facebook {
+        border-radius: 0 15px 0 0;
+        background: #3B5998;
+        color: white;
+    }
+    
+    .twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .google {
+        background: #dd4b39;
+        color: white;
+    }
+    
+    .linkedin {
+        background: #007bb5;
+        color: white;
+    }
+    
+    .youtube {
+        border-radius: 0 0 15px 0;
+        background: #bb0000;
+        color: white;
+    }
+    
+    @media screen and (max-width: 700px) {
+        .icon-bar {
+            display: inline;
+            position: relative;
+            bottom: 0;
+        }
+    }
+    /* -------TEST-------*/
+    
+    .mock-test {
+        position: fixed;
+        top: 50%;
+        right: 0%;
+    }
+    
+    @media screen and (max-width: 700px) {
+        .mock-test img {
+            width: 150px;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+        .mock-test img {
+            width: 100px;
+        }
+    }
+    /*----Top-----*/
+    
+    #myBtn {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Fixed/sticky position */
+        bottom: 20px;
+        /* Place the button at the bottom of the page */
+        right: 30px;
+        /* Place the button 30px from the right */
+        z-index: 99;
+        /* Make sure it does not overlap */
+        border: none;
+        /* Remove borders */
+        outline: none;
+        /* Remove outline */
+        background-color: red;
+        /* Set a background color */
+        color: white;
+        /* Text color */
+        cursor: pointer;
+        /* Add a mouse pointer on hover */
+        padding: 12px;
+        /* Some padding */
+        border-radius: 10px;
+        /* Rounded corners */
+        font-size: 18px;
+        /* Increase font size */
+    }
+    
+    #myBtn:hover {
+        background-color: #555;
+        /* Add a dark-grey background on hover */
+    }
+    
+    @media screen and (max-width: 700px) {
+        #myBtn {
+            width: 50px !important;
+            height: 50px !important;
+            padding: 0;
+        }
+    }
+    
+    @media screen and (max-width: 500px) {
+        #myBtn {
+            width: 40px !important;
+            height: 40px !important;
+            padding: 0;
+        }
+    }
+    /*-----Stats------*/
+    
+    #stats {
+        background: url("../images/aw.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    #stats .container-box-lg {
+        background: rgba(0, 0, 0, 0.3)
+    }
+    
+    .stats-item {
+        background: rgba(61, 68, 68, 0.6);
+        border-radius: 4px;
+        min-height: 170px;
+        padding: 25px 50px;
+        transition: all 500ms linear;
+        -webkit-transition: all 500ms linear;
+    }
+    
+    .stats-item i {
+        font-size: 42px;
+        color: crimson;
+        margin: 0 0 6px 0;
+        transition: all 500ms linear;
+        -webkit-transition: all 500ms linear;
+    }
+    
+    .stats-item h3 {
+        font-size: 32px;
+        color: #fff;
+        margin: 5px 0 5px 0;
+    }
+    
+    .stats-item p {
+        color: #fff;
+        margin: 0;
+    }
+    
+    .stats-item:hover {
+        background: #f4c613;
+    }
+    
+    .stats-item:hover i {
+        color: #fff;
+        transform: translateY(-20px)
+    }
+    /*------clients--------*/
+    
+    #clients heading {
+        margin: 30px auto;
+    }
+    
+    #clients-list {
+        padding-top: 45px;
+    }
+    
+    .client {
+        padding: 0 10px;
+        max-width: 150px;
+        margin: 0 auto;
+        line-height: 100px;
+    }
+    
+    .client img {
+        display: inline;
+    }
+    
+    .slideanim {
+        visibility: hidden;
+    }
+    
+    .slide {
+        /* The name of the animation */
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        /* The duration of the animation */
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        /* Make the element visible */
+        visibility: visible;
+    }
+    /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+    
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    
+    @-webkit-keyframes slide {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+    /*team--------- */
+    
+    .our-team {
+        text-align: center;
+        transition: all 0.5s ease 0s;
+    }
+    
+    .our-team:hover {
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+    
+    .our-team .pic {
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .our-team .pic:before,
+    .our-team .pic:after {
+        content: "";
+        width: 200%;
+        height: 80%;
+        background: rgba(38, 37, 37, 0.8);
+        position: absolute;
+        top: -100%;
+        left: -4%;
+        transform: rotate(45deg);
+        transition: all 0.5s ease 0s;
+    }
+    
+    .our-team .pic:after {
+        background: rgba(8, 75, 77, 0.8);
+        top: auto;
+        left: auto;
+        bottom: -100%;
+        right: -4%;
+    }
+    
+    .our-team:hover .pic:before {
+        top: 0;
+    }
+    
+    .our-team:hover .pic:after {
+        bottom: 0;
+    }
+    
+    .our-team .pic img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .our-team .social {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: absolute;
+        bottom: 45%;
+        left: 0;
+        opacity: 0;
+        z-index: 2;
+        transition: all 0.5s ease 0.3s;
+    }
+    
+    .our-team:hover .social {
+        opacity: 1;
+    }
+    
+    .our-team .social li {
+        display: inline-block;
+    }
+    
+    .our-team .social li a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        margin-right: 10px;
+        position: relative;
+        transition: all 0.3s ease 0s;
+    }
+    
+    .our-team .social li a:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #db162f;
+        border-radius: 0 20px 20px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.3s ease 0s;
+    }
+    
+    .our-team .social li a:hover:after {
+        transform: rotate(180deg);
+    }
+    
+    .our-team .team-content {
+        padding: 20px;
+    }
+    
+    .our-team .title {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #047168;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+    }
+    
+    .our-team .post {
+        display: block;
+        font-size: 17px;
+        font-weight: 600;
+        color: #707070;
+        text-transform: capitalize;
+    }
+    
+    @media only screen and (max-width: 990px) {
+        .our-team {
+            margin-bottom: 30px;
+        }
+    }
+    /* Set the size of the div element that contains the map */
+    
+    #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+    }
+    
+    .modal-header,
+    h4,
+    .close {
+        background-color: #F44336;
+        color: white !important;
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .modal-footer {
+        background-color: #f9f9f9;
+    }
